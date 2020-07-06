@@ -50,10 +50,10 @@ object App {
       val latency = ctrl.ping().get
       println(s"ping latency $latency")
     }
-    //stream.close().get
-    //client.close().stop
-    //server.close().stop
-
+    //stream
+    client.stop
+    server.stop
+    println("Done!")
   }
 
 }
